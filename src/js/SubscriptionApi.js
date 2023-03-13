@@ -5,7 +5,7 @@ export default class SubscriptionApi {
   }
 
   async renderInstances() {
-    const request = fetch(`http://${this.apiUrl}instances/`, {
+    const request = fetch(`https://${this.apiUrl}instances/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ export default class SubscriptionApi {
   }
 
   async addInstance() {
-    const request = fetch(`http://${this.apiUrl}addInstance/`, {
+    const request = fetch(`https://${this.apiUrl}addInstance/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ export default class SubscriptionApi {
   async removeInstance(id) {
     const query = `removeInstance/?id=${encodeURIComponent(id)}`;
 
-    const request = fetch(`http://${this.apiUrl + query}`, {
+    const request = fetch(`https://${this.apiUrl + query}`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/x-www-form-urlencoded',

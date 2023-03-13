@@ -1,5 +1,5 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/e28hdsp6575ac6lf?svg=true)](https://ci.appveyor.com/project/AlexWEBArt/ahj-chat-frontend)
-https://alexwebart.github.io/AHJ-Chat-frontend/
+[![Build status](https://ci.appveyor.com/api/projects/status/e28hdsp6575ac6lf?svg=true)](https://ci.appveyor.com/project/AlexWEBArt/ahj-cloud-dashboard-frontend)
+https://alexwebart.github.io/AHJ-Cloud-Dashboard-fronend/
 
 Правила сдачи задания:
 

@@ -4,7 +4,7 @@ export default class CreateLog {
   }
 
   connectingToSSE(url) {
-    const eventSource = new EventSource(`http://${url}sse`);
+    const eventSource = new EventSource(`https://${url}sse`);
 
     eventSource.addEventListener('open', (e) => {
       console.log(e);
