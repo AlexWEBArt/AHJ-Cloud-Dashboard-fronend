@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style-type: none;
+}
+
+li {
+    min-width: 10%;
+}
+
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    position: relative;
+}
+
+.container-instances,
+.container-worklogs {
+    padding: 2%;
+    width: 48%;
+    height: 80vh;
+    background-color: #fff;
+    border: 2px solid #575757;
+    border-radius: 10px;
+}
+
+.container-instances {
+    width: 38%;
+}
+
+.title-instances,
+.title-worklogs {
+    font-size: 18px;
+    color: #575757;
+}
+
+.new-instance {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.instance-container {
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 2px solid #575757;
+    border-radius: 10px;
+}
+
+.instance-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.instance-row {
+    display: flex;
+    align-items: center;
+}
+
+.title-width {
+    min-width: 70px;
+}
+
+.action-playback,
+.action-delete {
+    font-size: 24px;
+}
+
+.log-container {
+    font-size: 12px;
+    margin-bottom: 3%;
+}
