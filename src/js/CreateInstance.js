@@ -2,25 +2,19 @@ export default class CreateInstance {
   constructor(url, container) {
     this.URL = url;
     this.container = container;
-    // this.ws = new WebSocket(`ws://${this.URL}/ws`);
   }
 
   conectingToWS(id) {
-    const ws = new WebSocket(`ws://${this.URL}/ws`);
+    const ws = new WebSocket(`wss://${this.URL}/ws`);
 
-    // const changeInstance = document.querySelector('.instance-status-change');
     const activeInstance = Array.from(document.querySelectorAll('.instance-id'))
       .find((item) => item.textContent === id)
       .closest('.instance-container');
-    // const instanceId = Array.from(document.querySelectorAll('.instance-id')).
-    //     find(item => item === id);
     const instanceStatus = activeInstance.querySelector('.instance-status');
     const instancePlayback = activeInstance.querySelector('.action-playback');
 
     instancePlayback.addEventListener('click', () => {
       const instance = {};
-
-      // if (!instance.id) return;
 
       instance.id = id;
 
@@ -31,8 +25,6 @@ export default class CreateInstance {
       }
 
       ws.send(JSON.stringify(instance));
-
-      // chatMessage.value = '';
     });
 
     ws.addEventListener('open', (e) => {

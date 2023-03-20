@@ -41,6 +41,7 @@ li {
     background-color: #fff;
     border: 2px solid #575757;
     border-radius: 10px;
+    overflow: auto;
 }
 
 .container-instances {

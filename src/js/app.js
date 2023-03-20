@@ -11,7 +11,7 @@ const containerInstances = document.querySelector('.instances-box');
 const containerLogs = document.querySelector('.logs-box');
 
 const instanceFactory = new CreateInstance(URL, containerInstances);
-const logsFactory = new CreateLog(containerLogs);
+const logsFactory = new CreateLog(containerLogs, instanceFactory);
 
 window.api = new SubscriptionApi(URL, instanceFactory);
 logsFactory.connectingToSSE(URL);

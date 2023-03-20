@@ -1,6 +1,7 @@
 export default class CreateLog {
-  constructor(container) {
+  constructor(container, instanceFactory) {
     this.container = container;
+    this.instanceFactory = instanceFactory;
   }
 
   connectingToSSE(url) {
@@ -24,6 +25,22 @@ export default class CreateLog {
       const log = JSON.parse(e.data);
 
       this.renderLog(log);
+
+      if (log.info === 'Created') {
+        const item = {
+          id: log.id,
+          state: 'stopped',
+        };
+        this.instanceFactory.renderInstance(item);
+      }
+
+      if (log.info === 'Removed') {
+        const idList = Array.from(document.querySelectorAll('.instance-id'));
+
+        const activeInstance = idList.filter((item) => item.textContent === log.id)[0];
+
+        activeInstance.closest('.instance-container').remove();
+      }
 
       console.log('sse message');
     });
