@@ -154,6 +154,7 @@ export default class CreateInstance {
     instanceLiActionsRow.append(instanceLiActionsDelete);
     instanceLiActionsDelete.append(instanceActionsDelete);
 
+    window.api.removeLoading();
     this.conectingToWS(item.id);
   }
 }

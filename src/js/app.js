@@ -13,7 +13,7 @@ const containerLogs = document.querySelector('.logs-box');
 const instanceFactory = new CreateInstance(URL, containerInstances);
 const logsFactory = new CreateLog(containerLogs, instanceFactory);
 
-window.api = new SubscriptionApi(URL, instanceFactory);
+window.api = new SubscriptionApi(URL, instanceFactory, containerInstances);
 logsFactory.connectingToSSE(URL);
 
 const addInstance = document.querySelector('.new-instance');
@@ -21,5 +21,6 @@ const addInstance = document.querySelector('.new-instance');
 window.api.renderInstances();
 
 addInstance.addEventListener('click', () => {
+  window.api.generationLoading();
   window.api.addInstance();
 });
