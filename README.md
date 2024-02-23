@@ -11,6 +11,8 @@ https://alexwebart.github.io/AHJ-Cloud-Dashboard-fronend/
 
 ![](./src/img/cloud.png)
 
+```
+
 #### Серверная часть
 
 SSE, WebSocet
@@ -34,7 +36,6 @@ router.post('/instances', async (ctx) => {
     status: 'ok'
   }
 });
-```
 
 #### Клиентская часть
 
