@@ -11,6 +11,10 @@ https://alexwebart.github.io/AHJ-Cloud-Dashboard-fronend/
 
 ![](./src/img/cloud.png)
 
+## Cервер
+
+Хостинг сервера - Render (url) - https://сloud-Dashboard.onrender.com - бесплатный хостинг, подъем из спящего режима около 30 сек.
+
 ```
 
 #### Серверная часть
